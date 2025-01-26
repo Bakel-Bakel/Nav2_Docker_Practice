@@ -25,6 +25,7 @@ RUN apt install ros-humble-navigation2 -y
 RUN apt install ros-humble-nav2-bringup -y
 RUN apt install ros-humble-slam-toolbox -y
 RUN apt install ros-humble-turtlebot3-gazebo -y
+RUN apt install ros-humble-turtlebot3-teleop -y
 RUN apt install ros-humble-rmw-cyclonedds-cpp -y
 RUN apt install ros-humble-joint-state-publisher-gui -y
 RUN apt install ros-humble-rtabmap -y
