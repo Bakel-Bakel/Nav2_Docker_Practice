@@ -33,6 +33,9 @@ RUN apt install ros-humble-rviz-visual-tools -y
 RUN apt install ros-humble-imu-tools -y
 RUN apt install ros-humble-octomap-rviz-plugins -y
 RUN sudo apt-get install ros-humble-geographic-msgs
+RUN apt install ros-humble-turtlebot3-teleop -y
+RUN apt install ros-humble-turtlebot3-cartographer -y
+RUN apt install ros-humble-turtlebot3-navigation2 -y
 
 RUN apt-get update && apt-get install -y
 RUN sudo apt install pip -y
