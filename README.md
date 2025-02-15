@@ -43,10 +43,11 @@ Note: The container's root password is "user" by default.
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
-4. 
+4. Start Navigation 2
 ```sh
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/turtle_world/my_maps.yaml
 ```
+In case this you have any issues with this command, stop it and re-run it again. At times it takes a few trials to get it going properly.
 
 ## Packages used in Dockerfile
 - kmod
