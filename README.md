@@ -52,7 +52,23 @@ ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:
 ```sh
 ros2 launch urdf_tutorial display.launch.py model:=/home/user/ros2_ws/src/my_robot.urdf
 ```
+7. Start a Navigation launch file
+```sh
+$ ros2 launch nav2_bringup navigation_launch.py
+(add use_sim_time:=True if using Gazebo)
+```
+8. Start SLAM with slam_toolbox
+```sh
+$ ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True
+```
 
+9. Start Rviz
+```sh
+$ ros2 run rviz2 rviz2
+```
+Note you will need to configure riz2 after starting by adding the maps, tf, laserscan and other parameters.
+
+10. Things to do: Next I will learn how to directly interact with the Nav2 interface with my code, for example using the Simple Commander API
 
 ## Packages used in Dockerfile
 - kmod
@@ -74,7 +90,24 @@ External repositories included in this porject:
 
 
 ## Little Adjustments
-   
+
+The following were added to the dockerfile to ensure it had what I needed for practice.
+
+```sh
+RUN apt install ros-humble-turtlebot3-teleop -y
+RUN apt install ros-humble-turtlebot3-cartographer -y
+RUN apt install ros-humble-turtlebot3-navigation2 -y
+RUN apt install ros-humble-urdf-tutorial -y
+RUN apt install gedit -y
+
+RUN sudo sed -i 's/^\(\s*robot_model_type:\s*\).*/\1"nav2_amcl::DifferentialMotionModel"/' /opt/ros/humble/share/turtlebot3_navigation2/param/waffle.yaml
+
+COPY --chown=user ./maps ${HOME}/ros2_ws/maps
+COPY --chown=user ./worlds ${HOME}/ros2_ws/worlds
+
+RUN echo "export TURTLEBOT3_MODEL=waffle" >>  ${HOME}/.bashrc
+RUN echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >>  ${HOME}/.bashrc
+```
    
    
    
