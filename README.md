@@ -1,7 +1,7 @@
 <!-- GETTING STARTED -->
 ## Overview
-- This project is being created by Bakel Bakel under the supervision of Mr. Stefano (PhD in view). The package builds on the initial dockerfile used for the rover for autonomous navigation at PrismaLab. This package is a ros2 porting of a indoor navigation project and implement integration with Slam and Navigation ROS2 package.
-
+- This project is being created by Bakel Bakel under the supervision of Mr. Stefano (PhD in view). The package builds on the initial dockerfile used for the rover for autonomous navigation at PrismaLab.
+  
 - Basically, the dockerfile used here has been modified to suit this particular project. It still retains the main features of the initial rover dockerfile, just [Little Adjustments](#little-adjustments) to meet the need of this project. 
   
 
