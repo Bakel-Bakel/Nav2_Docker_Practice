@@ -1,24 +1,16 @@
 <!-- GETTING STARTED -->
 ## Overview
-- This package is being created to add necessary features and improvements for our robots, specifically for ros2. This package is a ros2 porting of a indoor navigation project and implement integration with Slam and Navigation ROS2 package.
+- This project is being created by Bakel Bakel under the supervision of Mr. Stefano (PhD in view). The package builds on the initial dockerfile used for the rover for autonomous navigation at PrismaLab. This package is a ros2 porting of a indoor navigation project and implement integration with Slam and Navigation ROS2 package.
 
   
-
 - This package is exclusively built for ROS2. It is being tested on Ubuntu 20.04 with ROS2-Humble.
-
-  
-
-  
 
 - All the branches of this package are relative to a specific Sensor integration.
 
-<div align="center">
-    <img src="docs/real_rover.png" width="75%"/>
-</div>
 
 ## Table of Contents
 
-1. [Prerequisites](#Prerequisites)
+1. [How to set up](#Prerequisites)
 2. [Packages used in Dockerfile](#Packages-used-in-Dockerfile)
 3. [Image Compilation and Execution](#Image-Compilation-and-Execution)
 4. [Usage](#Usage)
