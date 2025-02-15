@@ -1,7 +1,7 @@
 <!-- GETTING STARTED -->
 ## Overview
-- This project is being created by Bakel Bakel under the supervision of Mr. Stefano (PhD in view). The package builds on the initial dockerfile used for the rover for autonomous navigation at PrismaLab.
-  
+- This project is being created by Bakel Bakel under the supervision of Mr. Stefano (PhD in view). The package builds on the initial dockerfile used for the rover for autonomous navigation at PrismaLab. This package is a ros2 porting of a indoor navigation project and implement integration with Slam and Navigation ROS2 package.
+
 - Basically, the dockerfile used here has been modified to suit this particular project. It still retains the main features of the initial rover dockerfile, just [Little Adjustments](#little-adjustments) to meet the need of this project. 
   
 
@@ -43,17 +43,12 @@ Note: The container's root password is "user" by default.
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
-<<<<<<< HEAD
-4. Start Navigation 2
-=======
-4. Launch the turtle robot in rviz for nav2
->>>>>>> 989b65d (few updates)
+5. Launch the turtle robot in rviz for nav2
 ```sh
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/turtle_world/my_maps.yaml
 ```
-In case this you have any issues with this command, stop it and re-run it again. At times it takes a few trials to get it going properly.
 
-5. Launch and display the custom robot in rviz
+6. Launch and display the custom robot in rviz
 ```sh
 ros2 launch urdf_tutorial display.launch.py model:=/home/user/ros2_ws/src/my_robot.urdf
 ```
