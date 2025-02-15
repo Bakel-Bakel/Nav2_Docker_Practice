@@ -71,6 +71,9 @@ USER user
 RUN mkdir -p ${HOME}/ros2_ws/src
 WORKDIR ${HOME}/ros2_ws
 COPY --chown=user ./src ${HOME}/ros2_ws/src
+COPY --chown=user ./maps ${HOME}/ros2_ws/maps
+COPY --chown=user ./worlds ${HOME}/ros2_ws/worlds
+
 SHELL ["/bin/bash", "-c"] 
 WORKDIR ${HOME}/ros2_ws/src/git
 
@@ -87,8 +90,12 @@ WORKDIR ${HOME}/ros2_ws
 
 RUN source /opt/ros/${ROS_DISTRO}/setup.bash; rosdep update; rosdep install -i --from-path src --rosdistro humble -y; colcon build --symlink-install
 
+RUN echo "export TURTLEBOT3_MODEL=waffle" >>  ${HOME}/.bashrc
+RUN echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >>  ${HOME}/.bashrc
 RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash;" >>  ${HOME}/.bashrc
 RUN echo "source ${HOME}/ros2_ws/install/local_setup.bash;" >>  ${HOME}/.bashrc
+RUN sed -i 's/^\(\s*robot_model_type:\s*\).*/\1"nav2_amcl::DifferentialMotionModel"/' /opt/ros/humble/share/turtlebot3_navigation2/param/waffle.yaml
+
 
 
 #Clean image
