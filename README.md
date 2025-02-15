@@ -1,6 +1,6 @@
 <!-- GETTING STARTED -->
 ## Overview
-- This project is being created by Bakel Bakel under the supervision of Mr. Stefano (PhD in view). The package builds on the initial dockerfile used for the rover for autonomous navigation at PrismaLab. This package is a ros2 porting of a indoor navigation project and implement integration with Slam and Navigation ROS2 package.
+- This project is being created by Bakel Bakel under the supervision of Mr. Stefano (PhD in view). The package builds on the initial dockerfile used for the rover for autonomous navigation at PrismaLab.
 
 - Basically, the dockerfile used here has been modified to suit this particular project. It still retains the main features of the initial rover dockerfile, just [Little Adjustments](#little-adjustments) to meet the need of this project. 
   
@@ -54,17 +54,17 @@ ros2 launch urdf_tutorial display.launch.py model:=/home/user/ros2_ws/src/my_rob
 ```
 7. Start a Navigation launch file
 ```sh
-$ ros2 launch nav2_bringup navigation_launch.py
+ros2 launch nav2_bringup navigation_launch.py
 (add use_sim_time:=True if using Gazebo)
 ```
 8. Start SLAM with slam_toolbox
 ```sh
-$ ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True
+ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True
 ```
 
 9. Start Rviz
 ```sh
-$ ros2 run rviz2 rviz2
+ros2 run rviz2 rviz2
 ```
 Note you will need to configure riz2 after starting by adding the maps, tf, laserscan and other parameters.
 
