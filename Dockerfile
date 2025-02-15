@@ -70,6 +70,7 @@ USER user
 #ROS2 workspace creation and compilation
 RUN mkdir -p ${HOME}/ros2_ws/src
 WORKDIR ${HOME}/ros2_ws
+
 COPY --chown=user ./src ${HOME}/ros2_ws/src
 COPY --chown=user ./maps ${HOME}/ros2_ws/maps
 COPY --chown=user ./worlds ${HOME}/ros2_ws/worlds
