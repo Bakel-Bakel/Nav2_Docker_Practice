@@ -17,10 +17,9 @@ Firstly, get docker installed and fully running. [How to install docker](https:/
 1. Now to build the dockerfile into an image, Open a terminal in the repo and source the build file. 
 Run:
 
-'''sh
+```sh
 source docker_build.sh <IMAGE_NAME>
-'''
-
+```
 where <IMAGE_NAME> is a name for the image you want to build.
 
 2. To run the built docker image as a container, In the terminal in the repo, source the run file. Run:
@@ -35,19 +34,19 @@ where <IMAGE_NAME> is the name of the image you have just built, while <CONTAINE
 
 ```sh
 docker exec -it $(docker ps -aqf "name=<CONTAINER_NAME>") bash
-``'
+```
 Note: The container's root password is "user" by default.
 
 4. Launch the turtle robot in gazebo
 
-'''sh
+```sh
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
-'''
+```
 
 4. 
-'''sh
+```sh
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/turtle_world/my_maps.yaml
-'''
+```
 
 ## Packages used in Dockerfile
 - kmod
