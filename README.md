@@ -35,8 +35,19 @@ where <IMAGE_NAME> is the name of the image you have just built, while <CONTAINE
 
 ```sh
 docker exec -it $(docker ps -aqf "name=<CONTAINER_NAME>") bash
-```
+``'
 Note: The container's root password is "user" by default.
+
+4. Launch the turtle robot in gazebo
+
+'''sh
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+'''
+
+4. 
+'''sh
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/turtle_world/my_maps.yaml
+'''
 
 ## Packages used in Dockerfile
 - kmod

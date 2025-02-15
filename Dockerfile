@@ -64,6 +64,8 @@ RUN sudo adduser user video
 RUN sudo groupadd iio
 RUN sudo adduser user iio
 RUN sudo adduser user plugdev
+RUN sudo sed -i 's/^\(\s*robot_model_type:\s*\).*/\1"nav2_amcl::DifferentialMotionModel"/' /opt/ros/humble/share/turtlebot3_navigation2/param/waffle.yaml
+
 
 USER user
 
@@ -95,7 +97,6 @@ RUN echo "export TURTLEBOT3_MODEL=waffle" >>  ${HOME}/.bashrc
 RUN echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >>  ${HOME}/.bashrc
 RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash;" >>  ${HOME}/.bashrc
 RUN echo "source ${HOME}/ros2_ws/install/local_setup.bash;" >>  ${HOME}/.bashrc
-RUN sed -i 's/^\(\s*robot_model_type:\s*\).*/\1"nav2_amcl::DifferentialMotionModel"/' /opt/ros/humble/share/turtlebot3_navigation2/param/waffle.yaml
 
 
 
