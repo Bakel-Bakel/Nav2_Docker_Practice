@@ -43,11 +43,21 @@ Note: The container's root password is "user" by default.
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
+<<<<<<< HEAD
 4. Start Navigation 2
+=======
+4. Launch the turtle robot in rviz for nav2
+>>>>>>> 989b65d (few updates)
 ```sh
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/turtle_world/my_maps.yaml
 ```
 In case this you have any issues with this command, stop it and re-run it again. At times it takes a few trials to get it going properly.
+
+5. Launch and display the custom robot in rviz
+```sh
+ros2 launch urdf_tutorial display.launch.py model:=/home/user/ros2_ws/src/my_robot.urdf
+```
+
 
 ## Packages used in Dockerfile
 - kmod
