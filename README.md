@@ -67,20 +67,11 @@ ros2 launch urdf_tutorial display.launch.py model:=/home/user/ros2_ws/src/my_rob
 [Screencast from 2025-02-23 16-17-07.webm](https://github.com/user-attachments/assets/4b787924-0242-4906-a7b5-2517a1094683)
 
 
-7. Start a Navigation launch file
+7. To run the navigation script
 ```sh
-ros2 launch nav2_bringup navigation_launch.py
-(add use_sim_time:=True if using Gazebo)
-```
-8. Start SLAM with slam_toolbox
-```sh
-ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True
+./src/nav2_take1.py
 ```
 
-9. Start Rviz
-```sh
-ros2 run rviz2 rviz2
-```
 Note you will need to configure riz2 after starting by adding the maps, tf, laserscan and other parameters.
 
 10. Things to do: Next I will learn how to directly interact with the Nav2 interface with my code, for example using the Simple Commander API
