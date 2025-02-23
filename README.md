@@ -42,6 +42,8 @@ Note: The container's root password is "user" by default.
 ```sh
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
+[Screencast from 2025-02-23 16-35-49.webm](https://github.com/user-attachments/assets/67fad3b6-b560-49f1-8ced-3e1a4ad94d83)
+
 
 5. Launch the turtle robot in rviz for nav2
 ```sh
