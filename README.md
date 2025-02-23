@@ -45,10 +45,11 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 [Screencast from 2025-02-23 16-35-49.webm](https://github.com/user-attachments/assets/67fad3b6-b560-49f1-8ced-3e1a4ad94d83)
 
 
-5. Launch the turtle robot in rviz for nav2
+5. Launch the turtle robot in rviz for nav2 and navigate
 ```sh
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/turtle_world/my_maps.yaml
 ```
+[Screencast from 2025-02-23 18-05-49.webm](https://github.com/user-attachments/assets/8991bb71-b2e4-4930-bf46-2f22cd9b86a5)
 
 6. Launch and display the custom robot in rviz
 ```sh
