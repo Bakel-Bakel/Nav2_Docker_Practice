@@ -56,6 +56,10 @@ For the room map:
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=maps/turtle_house/my_house.yaml
 ```
 
+[Screencast from 2025-02-23 19-36-54.webm](https://github.com/user-attachments/assets/777d2e2e-5ba3-4d96-bba2-1251b59e2f97)
+
+
+
 6. Launch and display the custom robot in rviz
 ```sh
 ros2 launch urdf_tutorial display.launch.py model:=/home/user/ros2_ws/src/my_robot.urdf
