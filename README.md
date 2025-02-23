@@ -52,6 +52,9 @@ ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:
 ```sh
 ros2 launch urdf_tutorial display.launch.py model:=/home/user/ros2_ws/src/my_robot.urdf
 ```
+[Screencast from 2025-02-23 16-17-07.webm](https://github.com/user-attachments/assets/4b787924-0242-4906-a7b5-2517a1094683)
+
+
 7. Start a Navigation launch file
 ```sh
 ros2 launch nav2_bringup navigation_launch.py
